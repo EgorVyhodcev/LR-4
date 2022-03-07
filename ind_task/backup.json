@@ -1,13 +1,17 @@
-    {[
-        {
-            "flight_destination": "Hfhjfj",
-            "flight_number": "HY324",
-            "airplane_type": "Pass"
-        },
-        {
-            "flight_destination": "JFUfkd",
-            "flight_number": "Ht242",
-            "airplane_type": "Pass"
-        }
-    ]
-}
+[
+    {
+        "flight_destination": "Illinois",
+        "flight_number": "I2345",
+        "airplane_type": "Passenger"
+    },
+    {
+        "flight_destination": "Moscow",
+        "flight_number": "MO262",
+        "airplane_type": "Military"
+    },
+    {
+        "flight_destination": "Tempa",
+        "flight_number": "TP242",
+        "airplane_type": "Passenger"
+    }
+]

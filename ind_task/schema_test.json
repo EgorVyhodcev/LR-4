@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/product.schema.json",
+  "title": "Flight",
+  "description": "A plane flight from one destination to another",
+  "type": "array",
+  "items": {
+        "type": "object"
+      },
+  "required": ["items"]
+}
