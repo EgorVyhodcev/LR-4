@@ -3,7 +3,10 @@
 
 
 import json
+import jsonschema
+from jsonschema import validate
 import sys
+
 
 
 def get_flight():
@@ -97,6 +100,8 @@ def main():
     """
     Главная функция программы
     """
+    with open('schema_test.json', 'r') as file:
+        schema = json.load(file)
     flights = []
     while True:
         command = input(">>> ").lower()
@@ -144,8 +149,14 @@ def main():
             parts = command.split(maxsplit=1)
             # Получить имя файла.
             file_name = parts[1]
-            # Сохранить данные в файл с заданным именем.
             flights = load_workers(file_name)
+            try:
+                validate(instance=flights, schema=schema)
+            except jsonschema.exceptions.ValidationError as err:
+                err = "Given JSON data is InValid"
+                print(err)
+            message = "Given JSON data is Valid"
+            print(message)
         else:
             print(f"Неизвестная команда {command}", file=sys.stderr)
 
