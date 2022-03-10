@@ -153,9 +153,9 @@ def main():
             try:
                 validate(instance=flights, schema=schema)
             except jsonschema.exceptions.ValidationError as err:
-                err = "Given JSON data is InValid"
+                err = "Given JSON data are InValid"
                 print(err)
-            message = "Given JSON data is Valid"
+            message = "Given JSON data are Valid"
             print(message)
         else:
             print(f"Неизвестная команда {command}", file=sys.stderr)
